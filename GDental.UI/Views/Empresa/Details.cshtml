@@ -1,0 +1,82 @@
+﻿@model GDental.Core.Model.Empresa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CroResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CroResponsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RazaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RazaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InicioExpediente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InicioExpediente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FimExpediente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FimExpediente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChaveApi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChaveApi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

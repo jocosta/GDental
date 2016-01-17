@@ -1,0 +1,74 @@
+﻿@model IEnumerable<GDental.Core.Model.Empresa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CroResponsavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RazaoSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cnpj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InicioExpediente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FimExpediente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChaveApi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CroResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RazaoSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeFantasia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cnpj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InicioExpediente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FimExpediente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChaveApi)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new {  id=item.IdEmpresa}) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.IdEmpresa })
+        </td>
+    </tr>
+}
+
+</table>
