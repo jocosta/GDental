@@ -1,0 +1,50 @@
+﻿@model GDental.Core.Model.Tipo_Contato
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tipo_Contato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdTipoContato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdTipoContato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoContato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoContato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlgAtivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlgAtivo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new {id = Model.IdTipoContato }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

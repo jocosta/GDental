@@ -1,16 +1,25 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace GDental.Core.Model
 {
     public class Empresa
     {
+        
         public int IdEmpresa { get; set; }
+        [DisplayName("CRO Responsavel")]
         public string CroResponsavel { get; set; }
+        [DisplayName("Razão Social")]
         public string RazaoSocial { get; set; }
+        [DisplayName("Nome Fantasia")]
         public string NomeFantasia { get; set; }
+        [DisplayName("CNPJ")]
         public string Cnpj { get; set; }
+        [DisplayName("Inicio Expediente")]
         public string InicioExpediente { get; set; }
+        [DisplayName("Fim Expediente")]
         public string FimExpediente { get; set; }
+        [DisplayName("Chave Api")]
         public string ChaveApi { get; set; }
 
         public virtual ICollection<Tipo_Endereco> TipoEnderecos { get; set; }

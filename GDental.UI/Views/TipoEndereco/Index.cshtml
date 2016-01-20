@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GDental.Core.Model.Tipo_Endereco>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTipoEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEndereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlgAtivo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdTipoEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEndereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlgAtivo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdTipoEndereco  }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IdTipoEndereco }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.IdTipoEndereco })
+        </td>
+    </tr>
+}
+
+</table>

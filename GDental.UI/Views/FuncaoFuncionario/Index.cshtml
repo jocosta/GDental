@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GDental.Core.Model.Funcao_Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdFuncaoUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdFuncaoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new {id=item.IdFuncaoUsuario }) |
+            @Html.ActionLink("Detalhes", "Details", new {id=item.IdFuncaoUsuario }) |
+            @Html.ActionLink("Excluir", "Delete", new {id=item.IdFuncaoUsuario })
+        </td>
+    </tr>
+}
+
+</table>

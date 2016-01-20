@@ -199,6 +199,10 @@
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TipoContatoController.cs" />
+    <Compile Include="Controllers\TipoDocumentoController.cs" />
+    <Compile Include="Controllers\FuncaoFuncionarioController.cs" />
+    <Compile Include="Controllers\TipoEnderecoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,6 +213,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GDentalDb.mdf" />
+    <Content Include="App_Data\GDentalDb_log.ldf">
+      <DependentUpon>GDentalDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -272,10 +280,28 @@
     <Content Include="Views\Empresa\Create.cshtml" />
     <Content Include="Views\Empresa\Edit.cshtml" />
     <Content Include="Views\Empresa\Details.cshtml" />
+    <Content Include="Views\TipoDocumento\Index.cshtml" />
+    <Content Include="Views\TipoDocumento\Details.cshtml" />
+    <Content Include="Views\TipoDocumento\Create.cshtml" />
+    <Content Include="Views\TipoDocumento\Edit.cshtml" />
+    <Content Include="Views\TipoDocumento\Delete.cshtml" />
+    <Content Include="Views\FuncaoFuncionario\Delete.cshtml" />
+    <Content Include="Views\FuncaoFuncionario\Edit.cshtml" />
+    <Content Include="Views\FuncaoFuncionario\Create.cshtml" />
+    <Content Include="Views\FuncaoFuncionario\Details.cshtml" />
+    <Content Include="Views\FuncaoFuncionario\Index.cshtml" />
+    <Content Include="Views\TipoContato\Delete.cshtml" />
+    <Content Include="Views\TipoContato\Edit.cshtml" />
+    <Content Include="Views\TipoContato\Create.cshtml" />
+    <Content Include="Views\TipoContato\Details.cshtml" />
+    <Content Include="Views\TipoContato\Index.cshtml" />
+    <Content Include="Views\TipoEndereco\Delete.cshtml" />
+    <Content Include="Views\TipoEndereco\Edit.cshtml" />
+    <Content Include="Views\TipoEndereco\Create.cshtml" />
+    <Content Include="Views\TipoEndereco\Details.cshtml" />
+    <Content Include="Views\TipoEndereco\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
